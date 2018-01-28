@@ -1,3 +1,14 @@
+# 第一步：从药智数据网页爬取所有药品信息的图片，文件和物品说明。
+本身想通过异步多线程的方式在一个py文件中实现所有的功能，但是由于该网站做了反爬处理，可爬的数据量又非常小，所以就将代码分开。
+get_yaozhi.py中获取了药品的信息并将其写入到文件中。
+
+# 第二步：getdata.py中是file_spider.py和pic_spider.py两个的辅助类，从文件中读取数据。由于目录结构发生变化，代码需要调整才能跑通，注意os.path.dirname()的级别。
+
+# 第三步：file_spider获取文件
+
+# 第四步：pic_spider.py获取图片
+
+其中：
 {'Code': '53973', 'FileMark': '查看全文', 'FileUrl': 'https://db.yaozh.com/instruct/53973.html'}
 {'Code': '53974', 'FileMark': '查看全文', 'FileUrl': 'https://db.yaozh.com/instruct/53974.html'}
 {'Code': '53981', 'FileMark': '查看全文', 'FileUrl': 'https://db.yaozh.com/instruct/53981.html'}
@@ -9,6 +20,4 @@
 {'Code': '53981', 'FileMark': '查看全文', 'FileUrl': 'https://db.yaozh.com/instruct/53981.html'}
 {'Code': '53982', 'FileMark': '查看全文', 'FileUrl': 'https://db.yaozh.com/instruct/53982.html'}
 
-10个文件是 查看全文的，还每个重复，所以总共就是5个。
-5个要么不要，要么最后手动整理。
-好了，先暂时不管了，去管图片吧。
+10个文件是 查看全文的，还每个重复，所以总共就是5个。对结果不重要，所以就扔掉不管了。
